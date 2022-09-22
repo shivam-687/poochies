@@ -8,6 +8,9 @@
     body, html{
         @apply bg-primary/5 font-sans 
     }
+    body{
+        @apply relative;
+    }
 }
 
 @layer components{
@@ -19,7 +22,7 @@
          hover:text-primary 
          transition-all 
          duration-300 
-         px-3 py-2 
+         px-2 py-2 
          relative
          before:block 
          before:absolute 
