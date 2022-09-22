@@ -48,10 +48,10 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="px-5 ">
-            <div className="py-14 border-y border-gray-400 grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
+        <footer className="px-5">
+            <div className="py-14 border-y border-gray-400 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 lg:grid-cols-3">
                 <div className="flex item-center flex-col  gap-2">
-                    <div className="px-5 "><Image src={logoSquare} alt="poochies square logo" width={100} height={100}></Image></div>
+                    <div className="px-5 mb-2"><Image src={logoSquare} alt="poochies square logo" width={50} height={50}></Image></div>
                     <div className="flex items-center gap-2 text-lg"><span className="inline-block text-xl text-primary"><FaLocationArrow /></span>Jl. Menteng Raya, Jakarta 76812</div>
                     <div className="flex items-center gap-2 text-lg"><span className="inline-block text-xl text-primary"><MdMail /></span>help@carine.com</div>
                     <div className="flex items-center gap-2 text-lg"><span className="inline-block text-xl text-primary"><FaPhone /></span>+62 876-543-210</div>
@@ -68,7 +68,7 @@ export default function Footer() {
                         }
                     </div>
                 </div>
-                <div className="flex mark  justify-center md:justify-start ">
+                <div className="flex justify-center md:justify-start ">
                     <div className="w-full">
                         <h2 className="text-lg font-bold capitalize mb-5">Sign up to our newsletter</h2>
                         <div className="flex gap-2">
@@ -76,7 +76,7 @@ export default function Footer() {
                             <button className="btn btn-primary">Subscribe</button>
                         </div>
 
-                        <div className="flex items-center gap-2 mt-5">
+                        <div className="flex items-center justify-center md:justify-start gap-2 mt-5">
                             {
                                 socialLink.map((sl, index) => {
                                     return <div key={index} className="">
@@ -90,6 +90,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="flex gap-1 rounded-md bg-primary text-primary-content text-xs justify-center p-1">Made By <a className="link link-neutral" href="https://interlef.com" > Interlef Web Solutions</a></div>
         </footer>
     );
 }

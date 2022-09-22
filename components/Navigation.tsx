@@ -6,6 +6,7 @@ import Drawer from 'react-modern-drawer';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import 'react-modern-drawer/dist/index.css'
 import { NavLink } from "./Navlink";
+import {useInView} from 'react-intersection-observer';
 
 export type NavigationProps = {
 
@@ -20,6 +21,9 @@ export type MenuListItem = {
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const { ref, inView, entry } = useInView({
+
+    });
     const desktopLogo = '/assets/logos/logo-long.png';
     const mobileLogo = '/assets/logos/logo-square.png';
     const menuList: MenuListItem[] = [
@@ -54,7 +58,8 @@ const Navigation = () => {
     }
 
     return (
-        <nav className="navigation bg-primary/5 w-full">
+        <nav className={`relative`} >
+            <div className={`navigation w-full z-40 ${inView ? 'relative bg-primary/5' : 'fixed top-0 left-0 w-full bg-white shadow-md shadow-primary/20'}`}>
             <div className="w-full">
                 <div className="container mx-auto py-2 flex items-center px-5">
                     <div className="logo-container  flex-grow-0">
@@ -99,7 +104,11 @@ const Navigation = () => {
                     className=''
                     
                 >
-                    <div className="py-10 border-b-2 border-primary/50 mb-2"></div>
+                    <div className="py-3 flex items-center justify-center border-b-2 border-primary/50 mb-2">
+                    <div className="logo-container">
+                        <Image src={desktopLogo} alt="poochies kennel logo" width={180} height={28}></Image>
+                    </div>
+                    </div>
                     <div className="flex gap-2 flex-col p-3">
                         {
                             menuList.map((menu, index) => {
@@ -113,6 +122,9 @@ const Navigation = () => {
                     </div>
                 </Drawer>
             </div>
+            </div>
+
+            <div className="w-full absolute bottom-0 left-0" ref={ref}></div>
         </nav>
     );
 }

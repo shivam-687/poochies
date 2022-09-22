@@ -30,6 +30,7 @@ module.exports = {
           "secondary-content": "#000",
 
           accent: "#37CDBE",
+          "accent-focus": "#32b9ab",
           "accent-content": "#000",
 
           neutral: "#3D4451",

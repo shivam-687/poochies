@@ -63,6 +63,10 @@ const ContactForm = () => {
                 </label>
                 <textarea className="textarea textarea-bordered h-24" rows={20} placeholder="Bio"></textarea>
             </div>
+
+            <div className="flex items-center justify-end">
+                <button className="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 }

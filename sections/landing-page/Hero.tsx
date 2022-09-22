@@ -27,7 +27,7 @@ const Hero = () => {
 
 
                             <div className="flex gap-5 mt-7 items-center justify-center lg:justify-start">
-                                <button className="btn btn-outline">See Puppies</button>
+                                <button className="btn">See Puppies</button>
                                 <button className="btn bg-green-600 hover:bg-green-700 border-none text-white"><span><FaWhatsapp className="text-3xl mr-2"/></span>{`Let's Chat`}</button>
                             </div>
                         </div>
