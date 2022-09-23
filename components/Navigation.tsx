@@ -88,8 +88,8 @@ const Navigation = () => {
                     </div>
 
                     <div className="btn-container ml-2">
-                        <button className="btn btn-primary hidden md:inline-block">ENQUIRY</button>
-                        <button className="btn btn-circle btn-primary md:hidden inline-block ">
+                        <Link href={'/contact-us'}><a className="btn btn-primary hidden md:inline-flex">ENQUIRY</a></Link>
+                        <button className="btn btn-circle btn-primary md:hidden inline-flex ">
                             <span className="inline-flex items-center justify-center text-xl" onClick={toggleDrawer}><HiOutlineMenuAlt1 /></span>
                         </button>
                     </div>
