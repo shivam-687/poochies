@@ -2,9 +2,14 @@ import React from 'react'
 import { Section } from '../components/Section'
 import { SectionHeader } from '../components/SectionHeader'
 import Image from 'next/image';
+import Head from 'next/head';
 
 function AboutUs() {
   return (
+    <>
+    <Head>
+      <title>Poochies | About Us</title>
+    </Head>
     <Section>
       <SectionHeader title='About Us' />
 
@@ -14,6 +19,7 @@ function AboutUs() {
         </div>
       </div>
     </Section>
+    </>
   )
 }
 

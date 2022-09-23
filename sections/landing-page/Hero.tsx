@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import {FaWhatsapp} from 'react-icons/fa';
+import WhatsappBtn from "../../components/WhatsappBtn";
 
 
 const Zoom = require('react-reveal/Zoom');
@@ -27,8 +29,8 @@ const Hero = () => {
 
 
                             <div className="flex gap-5 mt-7 items-center justify-center lg:justify-start">
-                                <button className="btn">See Puppies</button>
-                                <button className="btn bg-green-600 hover:bg-green-700 border-none text-white"><span><FaWhatsapp className="text-3xl mr-2"/></span>{`Let's Chat`}</button>
+                                <Link href="/for-adoption"><a className="btn">See Puppies</a></Link>
+                               <WhatsappBtn/>
                             </div>
                         </div>
                     </div>

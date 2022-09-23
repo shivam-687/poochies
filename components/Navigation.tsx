@@ -77,9 +77,9 @@ const Navigation = () => {
                                 menuList.map((link, index) => {
                                     return (
                                         <li className="desktop-nav-link " key={`${nanoid(5)}_${index}`}>
-                                            <Link href={link.link} className="">
+                                            <NavLink href={link.link} activeClassName="text-primary">
                                                 <a>{link.lable}</a>
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     );
                                 })

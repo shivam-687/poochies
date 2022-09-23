@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export type ContactData = {
     fname: string,
     lname?: string,
@@ -10,16 +12,29 @@ export type ContactFormProps = {
     onSubmit?: (contact: ContactData) => void
 }
 
+const defaultContactData: ContactData = {
+    fname: '',
+    lname: '',
+    email: '',
+    subject: '',
+    message: ''
+}
 
-const ContactForm = () => {
 
-    const formSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+const ContactForm = (props: ContactFormProps) => {
+
+
+    const [formData, setFormData] = useState<ContactData>(defaultContactData)
+
+    const formSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         console.log("Form Submit");
+        props.onSubmit && props.onSubmit(formData);
     }
 
+
     return <div className="overflow-hidden w-full">
-        <form onSubmit={formSubmit} className="flex flex-col gap-5">
+        <form className="flex flex-col gap-5">
             <div className="flex flex-col justify-center  md:flex-row gap-5 md:items-center">
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
@@ -65,7 +80,7 @@ const ContactForm = () => {
             </div>
 
             <div className="flex items-center justify-end">
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary" onClick={formSubmit}>Submit</button>
             </div>
         </form>
     </div>

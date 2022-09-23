@@ -1,4 +1,6 @@
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
+import CONSTANT from "../lib/constant";
+import WhatsappBtn from "./WhatsappBtn";
 
 export type DogDetailesCardProps = {
     gender: string,
@@ -38,10 +40,10 @@ const DogDetailesCard = (dogInfo: DogDetailesCardProps) => {
             </div>
             <div className="divider"></div>
             <div className="flex items-center gap-5">
-                <button className="btn btn-primary flex-grow">Email Us</button>
-                <button className="btn flex-grow bg-green-600 hover:bg-green-700 border-none text-white"><span><FaWhatsapp className="text-3xl mr-2" /></span>{`Let's Chat`}</button>
+                <a href={`mailto:${CONSTANT.email}`} className="btn btn-primary flex-grow">Email Us</a>
+                <WhatsappBtn/>
             </div>
-            <button className="btn btn-primary mt-5 btn-block text-white"><span><FaPhone className="text-xl mr-2" /></span>{`Call Now`}</button>
+            <a href={`tel:${CONSTANT.phone}`} className="btn btn-primary mt-5 btn-block text-white"><span><FaPhone className="text-xl mr-2" /></span>{`Call Now`}</a>
         </div>
     )
 }
