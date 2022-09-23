@@ -20,7 +20,7 @@ const Hero = () => {
 
     return (
         <>
-            <section className="hero-section relative pt-20 pb-14 flex items-center px-5">
+            <section className="hero-section relative pt-20 pb-2 flex items-center px-5">
                 <div className="container mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-5 border border-black py-5 h-full rounded-2xl bg-primary">
                     <div className="flex items-center justify-center ">
                         <div className="w-full max-w-md">

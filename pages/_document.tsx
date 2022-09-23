@@ -6,18 +6,36 @@ export default function Document() {
         <Html>
             <Head>
 
-            <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-            <Script strategy='lazyOnload' id='gtag'>
-                {
-                    `
+                <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+                <Script strategy='lazyOnload' id='gtag'>
+                    {
+                        `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
                     gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
                     `
-                }
-            </Script>
+                    }
+                </Script>
+
+
+                <meta name="title" content="Poochie|Best place to find your furry friend" />
+                <meta name="description" content="If you are looking for the best options for bringing a puppy of your preferred breed home, your search ends here! Along with our dog breeding services, we provide dog lovers with some of the healthiest and most adorable puppies." />
+
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://poochies.interlef.com/" />
+                <meta property="og:title" content="Poochie|Best place to find your furry friend" />
+                <meta property="og:description" content="If you are looking for the best options for bringing a puppy of your preferred breed home, your search ends here! Along with our dog breeding services, we provide dog lovers with some of the healthiest and most adorable puppies." />
+                <meta property="og:image" content={'/assets/images/site-image.jpg'} />
+
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://poochies.interlef.com/" />
+                <meta property="twitter:title" content="Poochie|Best place to find your furry friend" />
+                <meta property="twitter:description" content="If you are looking for the best options for bringing a puppy of your preferred breed home, your search ends here! Along with our dog breeding services, we provide dog lovers with some of the healthiest and most adorable puppies." />
+                <meta property="twitter:image" content={'/assets/images/site-image.jpg'} />
 
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
